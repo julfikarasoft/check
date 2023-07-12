@@ -22,14 +22,14 @@ fi
 echo "Generating .env file..."
 cp .env.example .env
 
-# Step 3: Set the application key
-echo "Setting application key..."
-php artisan key:generate
+
 
 # Step 4: Install Composer dependencies
 echo "Installing Composer dependencies..."
 composer install
-
+# Step 3: Set the application key
+echo "Setting application key..."
+php artisan key:generate
 # Step 5: Start the Laravel project
 echo "Starting the Laravel project..."
 php artisan serve
