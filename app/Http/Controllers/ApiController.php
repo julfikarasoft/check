@@ -63,6 +63,9 @@ class ApiController extends Controller
     public function storeSubcategory(Request $request)
     {
         Subcategory::create($request->all());
+        $subcategoryCheck = Subcategory::create($request->all());
+        $subcategoryCheckagain = Subcategory::create($request->all());
+
         return response()->json(['status' => true, 'message' => 'Successfully Subcategory has been added']);
     }
     public function updateSubcategory(Request $request, $id)
